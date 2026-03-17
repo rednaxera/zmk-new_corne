@@ -11,13 +11,12 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
-
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
-    delay-ms = <0>;                   // 0
+    acceleration-exponent = <0>;
+    time-to-max-speed-ms = <300>;
+    delay-ms = <0>;
 };
 
 &mmv {
@@ -36,20 +35,36 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
-    };
 
-    rgb_encoder: rgb_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-    };
+        zoom_in: zoom_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(EQUAL)>;
+        };
 
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+        zoom_out: zoom_out {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(MINUS)>;
+        };
 
-        tap-ms = <100>;
+        zoom_encoder: zoom_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&zoom_in>, <&zoom_out>;
+        };
+
+        volume_encoder: volume_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOLUME_UP>, <&kp C_VOL_DN>;
+        };
+
+        rgb_encoder: rgb_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+        };
     };
 
     combos {
@@ -73,7 +88,7 @@
                           &lt 3 LEFT_ALT  &lt 1 LCTRL  &lt 2 SPACE                                               &lt 2 ENTER  &lt 3 RIGHT_GUI  &kp RALT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&zoom_encoder>;
         };
 
         lower_layer {
@@ -85,7 +100,7 @@
                                           &kp KP_NUMBER_0  &trans     &trans                                               &trans            &trans            &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&volume_encoder>;
         };
 
         layer_3 {
@@ -97,7 +112,7 @@
                               &trans     &trans     &trans                                           &trans       &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&zoom_encoder>;
         };
 
         raise_layer {
@@ -109,7 +124,7 @@
                                     &trans     &trans     &trans                                       &trans     &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&zoom_encoder>;
         };
     };
 };
