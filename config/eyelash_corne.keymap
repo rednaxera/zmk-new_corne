@@ -50,6 +50,13 @@
             bindings = <&kp LC(MINUS)>;
         };
 
+        small_bra: small_bra {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp ENTER &kp LEFT>;
+            label = "SMALL_BRA";
+        };
+
         zoom_encoder: zoom_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
