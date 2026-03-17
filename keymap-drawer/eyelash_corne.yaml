@@ -61,7 +61,7 @@ layers:
   - {t: Sft+8, s: Sft+*}
   - {t: Sft+9, s: Sft+(}
   - {t: Sft+9, s: Sft+(}
-  - {t: '0', s: )}
+  - PRINTSCREEN
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - KP 4
