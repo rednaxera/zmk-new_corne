@@ -70,7 +70,7 @@
 &kp TAB     &kp Q  &kp W  &kp E           &kp R        &kp T                               &kp UP                &kp Y        &kp U            &kp I      &kp O    &kp P         &kp BSPC
 &lt 1 CAPS  &kp A  &kp S  &kp D           &kp F        &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K      &kp L    &kp RS(SEMI)  &kp MINUS
 &td0        &kp Z  &kp X  &kp C           &kp V        &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH      &kp ESC
-                          &lt 2 LEFT_ALT  &lt 1 LCTRL  &lt 3 SPACE                                               &lt 3 ENTER  &lt 2 RIGHT_GUI  &kp RALT
+                          &lt 3 LEFT_ALT  &lt 1 LCTRL  &lt 2 SPACE                                               &lt 2 ENTER  &lt 3 RIGHT_GUI  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -88,18 +88,6 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        raise_layer {
-            display-name = "SYMBOL";
-            bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                    &trans          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &trans
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans            &trans          &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
-                                    &trans     &trans     &trans                                       &trans     &trans     &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
         layer_3 {
             display-name = "Fn";
             bindings = <
@@ -107,6 +95,18 @@
 &trans  &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &trans
 &trans  &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &trans
                                &trans       &trans     &trans                                                                   &trans       &trans     &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        raise_layer {
+            display-name = "SYMBOL";
+            bindings = <
+&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                    &trans          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &trans
+&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans            &trans          &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
+                                    &trans     &trans     &trans                                       &trans     &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
