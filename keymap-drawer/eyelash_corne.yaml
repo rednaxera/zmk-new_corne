@@ -57,10 +57,10 @@ layers:
   - {t: ., s: '>'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
+  - {t: Sft+7, s: Sft+&}
+  - {t: Sft+8, s: Sft+*}
+  - {t: Sft+9, s: Sft+(}
+  - {t: Sft+9, s: Sft+(}
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
@@ -72,9 +72,9 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-up-bold$$
+  - Sft+4
+  - {t: Sft+5, s: Sft+%}
+  - Sft+6
   - $$mdi:arrow-right-bold$$
   - HOME
   - PG UP
@@ -86,9 +86,9 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - RGB EFR
-  - RGB SPI
-  - RGB BRI
+  - Sft+1
+  - Sft+2
+  - Sft+3
   - RGB BRD
   - END
   - PG DN
@@ -96,7 +96,7 @@ layers:
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
