@@ -59,7 +59,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: Sft+7, s: Sft+&}
   - {t: Sft+8, s: Sft+*}
-  - {t: Sft+9, s: Sft+(}
+  - '&small_bra'
   - {t: Sft+9, s: Sft+(}
   - PRINTSCREEN
   - {t: '$$mdi:transfer$$', type: trans}
