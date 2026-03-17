@@ -1,5 +1,5 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 25    // 10
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -20,9 +20,8 @@
 
 &msc {
     acceleration-exponent = <0>;
-    time-to-max-speed-ms = <300>;
+    time-to-max-speed-ms = <180>;
     delay-ms = <0>;
-    scroll-mods = <(MOD_LCTL)>;
 };
 
 &mmv {
@@ -44,16 +43,37 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
+        zoom_in: zoom_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(EQUAL)>;
+        };
+
+        zoom_out: zoom_out {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(MINUS)>;
+        };
+
         zoom_encoder: zoom_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
+            bindings = <&zoom_in>, <&zoom_out>;
+            tap-ms = <5>;
+        };
+
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <3>;
         };
 
         volume_encoder: volume_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&kp C_VOLUME_UP>, <&kp C_VOL_DN>;
+            tap-ms = <5>;
         };
 
         rgb_encoder: rgb_encoder {
@@ -120,7 +140,7 @@
                                     &trans     &trans     &trans                                       &trans     &trans     &trans
             >;
 
-            sensor-bindings = <&zoom_encoder>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         encoder_vol_layer {
