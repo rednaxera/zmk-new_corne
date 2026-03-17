@@ -86,6 +86,13 @@
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
+
+        BS_DEL: BS_DEL {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BS_DEL";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DEL>, <&key_repeat>;
+        };
     };
 
     combos {
