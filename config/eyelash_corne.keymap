@@ -95,6 +95,13 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DEL>, <&key_repeat>;
         };
+
+        Ctrl_Esc: Ctrl_Esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL>, <&kp ESCAPE>;
+        };
     };
 
     combos {
@@ -115,13 +122,13 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB          &kp Q  &kp W  &kp E           &kp R        &kp T                                &kp UP                &kp Y        &kp U            &kp I      &kp O    &kp P         &BS_DEL
-&lt 1 LA(TILDE)  &kp A  &kp S  &kp D           &kp F        &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K      &kp L    &kp RS(SEMI)  &kp MINUS
-&shift_caps      &kp Z  &kp X  &kp C           &kp V        &kp B        &kp C_MUTE              &kp DOWN              &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH      &kp ESC
-                               &lt 2 LEFT_ALT  &lt 3 LCTRL  &lt 4 SPACE                                                &lt 2 ENTER  &lt 3 RIGHT_GUI  &kp RALT
+&kp TAB          &kp Q  &kp W  &kp E           &kp R        &kp T                           &kp UP                &kp Y        &kp U            &kp I      &kp O    &kp P         &BS_DEL
+&lt 1 LA(TILDE)  &kp A  &kp S  &kp D           &kp F        &kp G                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K      &kp L    &kp RS(SEMI)  &kp MINUS
+&shift_caps      &kp Z  &kp X  &kp C           &kp V        &kp B        &sl 4              &kp DOWN              &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH      &Ctrl_Esc
+                               &lt 2 LEFT_ALT  &lt 3 LCTRL  &lt 4 SPACE                                           &lt 2 ENTER  &lt 3 RIGHT_GUI  &kp RALT
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&zoom_encoder>;
         };
 
         lower_layer {
@@ -133,7 +140,7 @@
                                           &kp KP_NUMBER_0  &trans     &trans                                               &trans            &kp RCTRL         &trans
             >;
 
-            sensor-bindings = <&volume_encoder>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_3 {
@@ -145,7 +152,7 @@
                               &trans     &kp LCTRL  &trans                                           &trans        &trans        &trans
             >;
 
-            sensor-bindings = <&zoom_encoder>;
+            sensor-bindings = <&volume_encoder>;
         };
 
         raise_layer {
