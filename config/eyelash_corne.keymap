@@ -130,7 +130,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp TAB          &kp Q  &kp W  &kp E           &kp R        &kp T                           &kp UP                &kp Y        &kp U            &kp I      &kp O    &kp P         &BS_DEL
-&lt 1 LA(TILDE)  &kp A  &kp S  &kp D           &kp F        &kp G                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K      &kp L    &kp RS(SEMI)  &kp MINUS
+&lt 1 LA(GRAVE)  &kp A  &kp S  &kp D           &kp F        &kp G                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K      &kp L    &kp RS(SEMI)  &kp MINUS
 &shift_caps      &kp Z  &kp X  &kp C           &kp V        &kp B        &sl 4              &kp DOWN              &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH      &Ctrl_Esc
                                &lt 2 LEFT_ALT  &lt 3 LCTRL  &lt 4 SPACE                                           &lt 2 ENTER  &lt 3 RIGHT_GUI  &kp RALT
             >;
@@ -141,9 +141,9 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp DOT    &kp ENTER                            &trans          &kp RS(N7)        &kp RS(N8)        &small_bra        &kp RS(N9)       &kp PRINTSCREEN  &trans
-&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON  &kp BACKSLASH                &trans  &trans  &trans  &kp RS(NUMBER_4)  &kp RS(N5)        &kp RS(NUMBER_6)  &kp RIGHT        &kp HOME         &kp PG_UP
-&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp FSLH   &kp DELETE     &kp C_MUTE            &trans          &kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &rgb_ug RGB_BRD  &kp END          &kp PG_DN
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp DOT    &kp ENTER                            &trans          &kp RS(N7)        &kp RS(N8)        &small_bra        &Big_Bra   &kp PRINTSCREEN  &trans
+&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON  &kp BACKSLASH                &trans  &trans  &trans  &kp RS(NUMBER_4)  &kp RS(N5)        &kp RS(NUMBER_6)  &kp GRAVE  &kp HOME         &kp PG_UP
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp FSLH   &kp DELETE     &kp C_MUTE            &trans          &kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &kp EQUAL  &kp END          &kp PG_DN
                                           &kp KP_NUMBER_0  &trans     &trans                                               &trans            &kp RCTRL         &trans
             >;
 
@@ -165,10 +165,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                    &trans          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR         &trans
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &rgb_ug RGB_TOG  &trans
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans            &trans          &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE         &trans
-                                    &trans     &trans     &trans                                       &trans     &trans     &trans
+&trans  &kp EXCL       &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                    &trans          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR         &trans
+&trans  &bt BT_CLR     &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &rgb_ug RGB_TOG  &trans
+&trans  &kp LS(LC(S))  &out OUT_BLE  &none      &none      &mkp MB5   &trans            &trans          &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE         &trans
+                                     &trans     &trans     &trans                                       &trans     &trans     &trans
             >;
 
             sensor-bindings = <&rgb_encoder>;
