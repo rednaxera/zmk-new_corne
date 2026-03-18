@@ -31,11 +31,13 @@
 
 / {
     behaviors {
-        td0: td0 {
+        shift_caps: shift_caps {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+
+            label = "SHIFT_CAPS";
         };
 
         zoom_in: zoom_in {
@@ -113,10 +115,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E           &kp R        &kp T                                &kp UP                &kp Y        &kp U            &kp I      &kp O    &kp P         &kp BSPC
-&lt 1 CAPS  &kp A  &kp S  &kp D           &kp F        &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K      &kp L    &kp RS(SEMI)  &kp MINUS
-&td0        &kp Z  &kp X  &kp C           &kp V        &kp B        &kp C_MUTE              &kp DOWN              &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH      &kp ESC
-                          &lt 2 LEFT_ALT  &lt 3 LCTRL  &lt 4 SPACE                                                &lt 2 ENTER  &lt 3 RIGHT_GUI  &kp RALT
+&kp TAB          &kp Q  &kp W  &kp E           &kp R        &kp T                                &kp UP                &kp Y        &kp U            &kp I      &kp O    &kp P         &BS_DEL
+&lt 1 LA(TILDE)  &kp A  &kp S  &kp D           &kp F        &kp G                      &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K      &kp L    &kp RS(SEMI)  &kp MINUS
+&shift_caps      &kp Z  &kp X  &kp C           &kp V        &kp B        &kp C_MUTE              &kp DOWN              &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH      &kp ESC
+                               &lt 2 LEFT_ALT  &lt 3 LCTRL  &lt 4 SPACE                                                &lt 2 ENTER  &lt 3 RIGHT_GUI  &kp RALT
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -161,13 +163,13 @@
         encoder_vol_layer {
             display-name = "ENC_VOL";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bl BL_SET 40  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bl BL_SET 100  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans          &trans
                         &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
     };
 };
