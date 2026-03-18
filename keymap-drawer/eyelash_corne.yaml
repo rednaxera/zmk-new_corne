@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - '&BS_DEL'
-  - {t: Alt+~, h: NUMBER}
+  - {t: Alt+`, h: NUMBER, s: Alt+~}
   - A
   - S
   - D
@@ -60,7 +60,7 @@ layers:
   - {t: Sft+7, s: Sft+&}
   - {t: Sft+8, s: Sft+*}
   - '&small_bra'
-  - {t: Sft+9, s: Sft+(}
+  - '&Big_Bra'
   - PRINTSCREEN
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
@@ -75,7 +75,7 @@ layers:
   - Sft+4
   - {t: Sft+5, s: Sft+%}
   - Sft+6
-  - $$mdi:arrow-right-bold$$
+  - {t: '`', s: '~'}
   - HOME
   - PG UP
   - {t: '$$mdi:transfer$$', type: trans}
@@ -89,7 +89,7 @@ layers:
   - Sft+1
   - Sft+2
   - Sft+3
-  - RGB BRD
+  - {t: '=', s: +}
   - END
   - PG DN
   - KP 0
@@ -177,7 +177,7 @@ layers:
   - RGB TOG
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - OUT USB
+  - Sft+Ctl+S
   - OUT BLE
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
