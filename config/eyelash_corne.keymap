@@ -143,19 +143,19 @@
                               &trans     &kp LCTRL  &trans                                           &trans        &trans        &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&zoom_encoder>;
         };
 
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                    &trans          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR      &trans
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &bl BL_CYCLE  &trans
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans            &trans          &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE      &trans
+&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                    &trans          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR         &trans
+&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &rgb_ug RGB_TOG  &trans
+&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans            &trans          &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE         &trans
                                     &trans     &trans     &trans                                       &trans     &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rgb_encoder>;
         };
 
         encoder_vol_layer {
@@ -167,7 +167,7 @@
                         &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&volume_encoder>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
     };
 };
