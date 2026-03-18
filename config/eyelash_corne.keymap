@@ -16,8 +16,8 @@
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <0>;
-    time-to-max-speed-ms = <180>;
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <100>;
     delay-ms = <0>;
 };
 
@@ -70,7 +70,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
-            tap-ms = <3>;
+            tap-ms = <100>;
         };
 
         volume_encoder: volume_encoder {
