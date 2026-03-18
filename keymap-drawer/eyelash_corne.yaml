@@ -13,8 +13,8 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:apple-keyboard-caps$$', h: NUMBER}
+  - '&BS_DEL'
+  - {t: Alt+~, h: NUMBER}
   - A
   - S
   - D
@@ -29,7 +29,7 @@ layers:
   - L
   - {t: Sft+;, s: 'Sft+:'}
   - {t: '-', s: _}
-  - '&td0'
+  - '&shift_caps'
   - Z
   - X
   - C
@@ -223,7 +223,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&bl BL_SET 40'
+  - '&bl BL_SET 100'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
