@@ -119,7 +119,7 @@
                           &lt 2 LEFT_ALT  &lt 3 LCTRL  &lt 4 SPACE                                                &lt 2 ENTER  &lt 3 RIGHT_GUI  &kp RALT
             >;
 
-            sensor-bindings = <&zoom_encoder>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         lower_layer {
