@@ -31,6 +31,43 @@
 
 / {
     behaviors {
+
+        sym_right: sym_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_NUMBER_2 &kp KP_NUMBER_6>
+                , <&macro_release &kp LALT>;
+        };
+
+        sym_left: sym_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_NUMBER_2 &kp KP_NUMBER_7>
+                , <&macro_release &kp LALT>;
+        };
+
+        sym_kome: sym_kome {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_NUMBER_8 &kp KP_NUMBER_2>
+                , <&macro_release &kp LALT>;
+        };
+
+        sym_star: sym_star {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_NUMBER_9 &kp KP_NUMBER_7 &kp KP_NUMBER_3>
+                , <&macro_release &kp LALT>;
+        };
+
         shift_caps: shift_caps {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
