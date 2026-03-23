@@ -30,7 +30,7 @@
 
 / {
     behaviors {
-        sym_left_arrow: sym_left_arrow {
+        sym_left: sym_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <30>;
@@ -41,7 +41,7 @@
                 , <&kp ENTER>;
         };
 
-        sym_right_arrow: sym_right_arrow {
+        sym_right: sym_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <30>;
@@ -63,7 +63,7 @@
                 , <&kp ENTER>;
         };
     
-        sym_black_star: sym_black_star {
+        sym_star: sym_star {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <30>;
