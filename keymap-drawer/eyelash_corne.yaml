@@ -46,7 +46,7 @@ layers:
   - {t: '$$mdi:apple-keyboard-option$$', h: Fn}
   - {t: Alt+`, h: NUMBER, s: Alt+~}
   - {t: '$$mdi:keyboard-space$$', h: ENC_VOL}
-  - {t: '$$mdi:keyboard-return$$', h: Fn}
+  - {t: '$$mdi:keyboard-return$$', h: NUMBER}
   - {t: RIGHT GUI, h: SYMBOL}
   - $$mdi:apple-keyboard-option$$
   NUMBER:
@@ -95,7 +95,7 @@ layers:
   - KP 0
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
@@ -144,7 +144,7 @@ layers:
   - {type: held}
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
