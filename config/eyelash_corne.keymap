@@ -30,62 +30,93 @@
 
 / {
     behaviors {
-        sym_right: sym_right {
+        sym_left_arrow: sym_left_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N2 &kp KP_N6>,
-                <&macro_release>,
-                <&kp LALT>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&kp H &kp D &kp Y>
+                , <&kp SPACE>
+                , <&kp ENTER>;
         };
 
-        sym_left: sym_left {
+        sym_right_arrow: sym_right_arrow {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N2 &kp KP_N7>,
-                <&macro_release>,
-                <&kp LALT>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&kp M &kp G &kp Y>
+                , <&kp SPACE>
+                , <&kp ENTER>;
         };
 
         sym_kome: sym_kome {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N0 &kp KP_N8 &kp KP_N2>,
-                <&macro_release>,
-                <&kp LALT>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&kp K &kp M &kp J>
+                , <&kp SPACE>
+                , <&kp ENTER>;
         };
-
-        sym_star: sym_star {
+    
+        sym_black_star: sym_black_star {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp KP_N9 &kp KP_N7 &kp KP_N3>,
-                <&macro_release>,
-                <&kp LALT>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&kp K &kp B &kp S>
+                , <&kp SPACE>
+                , <&kp ENTER>;
         };
 
+        sym_white_star: sym_white_star {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&kp S &kp B &kp S>
+                , <&kp SPACE>
+                , <&kp ENTER>;
+        };
+
+        sym_white_circle: sym_white_circle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&kp I &kp M &kp R>
+                , <&kp SPACE>
+                , <&kp ENTER>;
+        };
+
+        sym_double_circle: sym_double_circle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&kp N &kp M &kp R>
+                , <&kp SPACE>
+                , <&kp ENTER>;
+        };
+
+        sym_black_circle: sym_black_circle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&kp K &kp M &kp R>
+                , <&kp SPACE>
+                , <&kp ENTER>;
+        };
         shift_caps: shift_caps {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
