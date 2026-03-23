@@ -31,41 +31,52 @@
 
 / {
     behaviors {
-
         sym_right: sym_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_NUMBER_2 &kp KP_NUMBER_6>
-                , <&macro_release &kp LALT>;
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_6>,
+                <&macro_release>,
+                <&kp LALT>;
         };
 
         sym_left: sym_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_NUMBER_2 &kp KP_NUMBER_7>
-                , <&macro_release &kp LALT>;
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_2 &kp KP_NUMBER_7>,
+                <&macro_release>,
+                <&kp LALT>;
         };
 
         sym_kome: sym_kome {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_NUMBER_8 &kp KP_NUMBER_2>
-                , <&macro_release &kp LALT>;
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_8 &kp KP_NUMBER_2>,
+                <&macro_release>,
+                <&kp LALT>;
         };
 
         sym_star: sym_star {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LALT>
-                , <&macro_tap &kp KP_NUMBER_9 &kp KP_NUMBER_7 &kp KP_NUMBER_3>
-                , <&macro_release &kp LALT>;
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_9 &kp KP_NUMBER_7 &kp KP_NUMBER_3>,
+                <&macro_release>,
+                <&kp LALT>;
         };
 
         shift_caps: shift_caps {
@@ -180,7 +191,7 @@
             bindings = <
 &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp DOT    &kp ENTER                            &trans          &kp RS(N7)        &kp RS(N8)        &small_bra        &Big_Bra   &kp PRINTSCREEN  &trans
 &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON  &kp BACKSLASH                &trans  &trans  &trans  &kp RS(NUMBER_4)  &kp RS(N5)        &kp RS(NUMBER_6)  &kp GRAVE  &kp HOME         &kp PG_UP
-&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp FSLH   &kp DELETE     &kp C_MUTE            &trans          &kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &kp EQUAL  &kp END          &kp PG_DN
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp FSLH   &kp BACKSPACE  &kp C_MUTE            &trans          &kp RS(NUMBER_1)  &kp RS(NUMBER_2)  &kp RS(NUMBER_3)  &kp EQUAL  &kp END          &kp PG_DN
                                           &kp KP_NUMBER_0  &trans     &trans                                               &trans            &kp RCTRL         &trans
             >;
 
