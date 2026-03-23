@@ -184,10 +184,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB          &kp Q  &kp W  &kp E           &kp R        &kp T                           &kp UP                &kp Y        &kp U            &kp I      &kp O    &kp P         &BS_DEL
-&lt 1 LA(GRAVE)  &kp A  &kp S  &kp D           &kp F        &kp G                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K      &kp L    &kp RS(SEMI)  &kp MINUS
-&shift_caps      &kp Z  &kp X  &kp C           &kp V        &kp B        &sl 4              &kp DOWN              &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH      &Ctrl_Esc
-                               &lt 2 LEFT_ALT  &lt 3 LCTRL  &lt 4 SPACE                                           &lt 2 ENTER  &lt 3 RIGHT_GUI  &kp RALT
+&kp TAB           &kp Q  &kp W  &kp E           &kp R            &kp T                           &kp UP                &kp Y        &kp U            &kp I      &kp O    &kp P         &BS_DEL
+&shift_caps       &kp A  &kp S  &kp D           &kp F            &kp G                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J            &kp K      &kp L    &kp RS(SEMI)  &kp MINUS
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C           &kp V            &kp B        &sl 4              &kp DOWN              &kp N        &kp M            &kp COMMA  &kp DOT  &kp FSLH      &Ctrl_Esc
+                                &lt 2 LEFT_ALT  &lt 1 LA(GRAVE)  &lt 4 SPACE                                           &lt 2 ENTER  &lt 3 RIGHT_GUI  &kp RALT
             >;
 
             sensor-bindings = <&zoom_encoder>;
