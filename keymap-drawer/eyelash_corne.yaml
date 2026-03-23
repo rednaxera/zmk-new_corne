@@ -83,7 +83,7 @@ layers:
   - KP 2
   - KP 3
   - {t: /, s: '?'}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - Sft+1
