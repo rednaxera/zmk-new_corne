@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - '&BS_DEL'
-  - {t: Alt+`, h: NUMBER, s: Alt+~}
+  - '&shift_caps'
   - A
   - S
   - D
@@ -29,7 +29,7 @@ layers:
   - L
   - {t: Sft+;, s: 'Sft+:'}
   - {t: '-', s: _}
-  - '&shift_caps'
+  - $$mdi:apple-keyboard-control$$
   - Z
   - X
   - C
@@ -44,7 +44,7 @@ layers:
   - {t: /, s: '?'}
   - '&Ctrl_Esc'
   - {t: '$$mdi:apple-keyboard-option$$', h: Fn}
-  - {t: '$$mdi:apple-keyboard-control$$', h: SYMBOL}
+  - {t: Alt+`, h: NUMBER, s: Alt+~}
   - {t: '$$mdi:keyboard-space$$', h: ENC_VOL}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - {t: RIGHT GUI, h: SYMBOL}
@@ -63,7 +63,7 @@ layers:
   - '&Big_Bra'
   - PRINTSCREEN
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - KP 4
   - KP 5
   - KP 6
@@ -93,7 +93,7 @@ layers:
   - END
   - PG DN
   - KP 0
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-control$$
@@ -191,10 +191,10 @@ layers:
   - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   ENC_VOL:
   - {t: '$$mdi:transfer$$', type: trans}
